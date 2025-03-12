@@ -59,7 +59,7 @@ export default function AdminDashboard() {
     };
   
     fetchUsers();
-  }, [render]);
+  }, [render, router]);
 
   // Apply search and sort whenever users, searchTerm, or sort parameters change
   useEffect(() => {

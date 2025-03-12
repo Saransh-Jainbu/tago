@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 import crypto from 'crypto';
 import nodemailer from 'nodemailer';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 const url = process.env.NEXT_PUBLIC_URL;

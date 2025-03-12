@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
-  ExternalLink, 
   Github, 
   Twitter, 
   Linkedin, 
@@ -54,7 +53,7 @@ const ModernBentoLinks = () => {
     }
   };
   
-  const getIconForURL = (url) => {
+  const getIconForURL = (url: string) => {
     const domain = url.toLowerCase();
     if (domain.includes('github')) return Github;
     if (domain.includes('twitter')) return Twitter;
@@ -67,7 +66,7 @@ const ModernBentoLinks = () => {
     return Link2;
   };
 
-  const getPlatformName = (url) => {
+  const getPlatformName = (url: string) => {
     try {
       const domain = new URL(url).hostname.replace('www.', '');
       return domain.split('.')[0].charAt(0).toUpperCase() + domain.split('.')[0].slice(1);
